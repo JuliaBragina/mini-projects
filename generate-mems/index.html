@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактор Мемов</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body class="main">
+
+    <input class="main__inputSave" type="file" id="imageInput" accept="image/*">
+    <canvas class="main__canvas" id="memecanvas"></canvas>
+    <input class="main__inputAdd" type="text" id="topText" placeholder="Верхний текст">
+    <label class="main__labelColor" for="textColor">Выберите цвет текста:</label>
+    <input class="main__inputColor" type="color" id="textColor" value="#ffffff">
+    <button class="main__buttonAdd" id="addTextButton">Добавить текст</button>
+    <button class="main__buttonSave" id="saveButton">Сохранить</button>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра: Угадай число!</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+  <body class="root">
+    <header class="header">
+      <h1 class="header__title">Игра: Угадай число!</h1>
+    </header>
+    <main class="main">
+      <div class="main__form">
+
+        <form class="main__setRange">
+          <div class="main__rangeContainer">
+            <label class="main__label" for="min">Минимальное число</label>
+            <input id="min" class="main__input main__minInput">
+            <label class="main__label" for="max">Максимальное число</label>
+            <input id="max" class=" main__input main__maxInput">
+          </div>
+          <button type="button" class="main__buttonRange">Установить диапазон</button>
+        </form>
+
+        <form class="main__container">
+          <input class="main__input main__input--field" type="number" min="1" max="100" required>
+          <button type="submit" class="main__buttonForm">Проверить</button>
+        </form>
+
+      </div>
+      <div class="main__score-clues">
+        <div class="main__score">
+          <label class="main__label" for="score">Счетчик ошибок</label>
+          <input id="score" class="main__input main__input--score" value="0">
+        </div>
+        <div class="main__clues">
+          <label class="main__label" for="clues">Подсказка</label>
+          <input id="clues" class="main__input main__input--clues">
+        </div>
+      </div>
+
+      <button class="main__startAgain">Начать заново</button>
+
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

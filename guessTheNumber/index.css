@@ -1,0 +1,88 @@
+.root {
+  min-width: 320px;
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header__title,
+.main__titleForm {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.main__container, .main__score, .main__clues, .main__rangeContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.main__input--field, .main__input--score, .main__input--clues, .main__input--minInput, .main__input--maxInput {
+  width: 68%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+.main__buttonForm, .main__buttonRange {
+  width: 30%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.main__buttonRange {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.main__buttonForm:hover, .main__buttonRange:hover {
+  background-color: #0056b3;
+}
+
+.main__startAgain {
+  display: block;
+  width: 100%;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.main__startAgain:hover {
+  background-color: #0056b3;
+}
+@media screen and (max-width: 600px) {
+  .main__rangeContainer{
+    width: 100%;
+    flex-direction: column;
+  }
+  .main__input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__container, .main__score, .main__clues, .main__setRange, .main__rangeContainer{
+    flex-direction: column;
+  }
+  
+  .main__input, .main__buttonForm {
+    width: 100%;
+  }
+
+  .main__buttonForm, .main__buttonRange {
+    margin-top: 10px;
+  }
+}

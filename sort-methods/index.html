@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Визуализация сортировки</title>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body class="sort">
+    <div class="sort__container">
+      <div class="sort__controls">
+        <select id="sortingMethod">
+          <option class="sort__item" value="bubbleSort">Сортировка пузырьком</option>
+          <option class="sort__item" value="shakerSort">Шейкер</option>
+          <option class="sort__item" value="insertionSort">Сортировка вставками</option>
+          <option class="sort__item" value="selectionSort">Сортировка выбором</option>
+          <option class="sort__item" value="quickSort">Быстрая сортировка</option>
+        </select>
+      <input class="sort__input" id="inputArray">
+      <button class="sort__button" id="startBtn">Начать сортировку</button>
+      <button class="sort__button" id="stopBtn">Остановить сортировку</button>
+      </div>
+      <div class="bars"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+
+</html>

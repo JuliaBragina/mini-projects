@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Счетчик калорий</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="root">
+    <header class="header">
+      <h1 class="header__title">Калькулятор калорий</h1>
+      <div class="header__buttons">
+        <button class="header__addItemButton"><img class="header__addItemImg" src="./img/addButton.svg"></button>
+        <button class="header__profileButton"><img class="header__profileImg" src="./img/profile.svg"></button>
+        <button class="header__graphsButton"><img class="header__graphsImg" src="./img/trend.svg"></button>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__titleContainer main__container">
+        <div class="main__foodContainer">
+          <input type="text" class="main__searchInput" placeholder="Введите название продукта">
+          <h2 class="main__titleFood">Наименование продукта</h2>
+          <button class="main__searchButton">
+          <img class="main__searchImg" src="./img/search-svgrepo-com.svg" alt="Поиск">
+          </button>
+        </div>
+
+        <div class="main__foodContainer">
+          <h2 class="main__titleCalorie">Колорийность</h2>
+          <div class="main__buttonSortContainer">
+          <button class="main__sortButton main__sortButtonCountUp"><img class="main__sortImg" src="./img/sort-numeric-asc.svg"></button>
+          <button class="main__sortButton main__sortButtonCountDown"><img class="main__sortImg" src="./img/sort-numeric-desc.svg"></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main__itemsContainer">
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__total main__container">
+        <h2 class="footer__titleTotal">Total :</h2>
+        <h2 class="footer__titleCalorie"></h2>
+      </div>
+    </footer>
+
+    <template id="tempalate">
+      <div class="main__container tempalate">
+        <p class="main__titleFood main__food" data-product-id></p>
+        <p class="main__titleCalorie main__countCalorie"></p>
+        <div class="main__buttonContainer">
+          <button type='click' class="main__editItem"  data-product-id><img class="main__editImg" src="./img/editButton.svg"></button>
+          <button type='click' class="main__deleteItem"  data-product-id><img class="main__deleteImg" src="./img/delete-button.svg"></button>
+        </div>
+      </div>
+    </template>
+
+    <div class="popup">
+      <div class="popup__container">
+        <form class="popup__addItem">
+          <button type="button" class="popup__closeButton"><img class='popup__closeImg' src="./img/cancel-close-svgrepo-com.svg" alt="close button"></button>
+          <h3 class="popup__title">Заполните поля</h3>
+          <label class="popup__label" for="food">Введите название продукта</label>
+          <input id="food" class="popup__input popup__inputFood">
+          <label class="popup__label" for="calorie">Введите калории</label>
+          <input id="calorie" class="popup__input popup__inputColorie">
+          <button type="submit" class="popup__addButton">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popupEdit">
+      <div class="popupEdit__container">
+        <form class="popupEdit__addItem">
+          <button type="button" class="popupEdit__closeButton"><img class='popupEdit__closeImg' src="./img/cancel-close-svgrepo-com.svg" alt="close button"></button>
+          <h3 class="popupEdit__title">Заполните поля</h3>
+          <label class="popupEdit__label" for="food">Введите название продукта</label>
+          <input id="food" class="popupEdit__input popupEdit__inputFood">
+          <label class="popupEdit__label" for="calorie">Введите калории</label>
+          <input id="calorie" class="popupEdit__input popupEdit__inputColorie">
+          <button type="submit" class="popupEdit__addButton">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popupProfile">
+      <div class="popupProfile__container">
+        <form class="popupProfile__addItem">
+          <button type="button" class="popupProfile__closeButton"><img class='popupProfile__closeImg' src="./img/cancel-close-svgrepo-com.svg" alt="close button"></button>
+          <label class="popupProfile__label" for="name">ФИО</label>
+          <input id="name" class="popupProfile__input popupProfile__inputName">
+          <label class="popupProfile__label" for="gCount">Целевое количество калорий</label>
+          <input id="gCount" class="popupProfile__input popupProfile__inputGCount">
+          <button type="submit" class="popupProfile__addButton">Сохранить</button>
+      </form>
+      </div>
+    </div>
+
+    <div class="popupVisual">
+      <div class="popupVisual__container">
+        <form class="popupVisual__addItem">
+          <button type="button" class="popupVisual__closeButton"><img class='popupVisual__closeImg' src="./img/cancel-close-svgrepo-com.svg" alt="close button"></button>
+          <canvas class="popupVisual__canvas" id="myPieChart"></canvas>
+        </form>
+      </div>
+    </div>
+
+    <script src="./index.js" defer></script>
+    <script src="./visual.js" defer></script>
+  </body>
+</html>
+

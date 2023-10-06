@@ -1,0 +1,42 @@
+.addTask {
+  margin: 0 auto;
+}
+
+.addTask__form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.addTask__item {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 35px;
+  width: 50vw;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.addTask__button {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 35px;
+  width: 7vw;
+  color: aliceblue;
+  background-color: black;
+  border-radius: 7px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 255, 255, 0.7),
+    0px 2px 6px 0px rgba(0, 255, 255, 0.7),
+    0px 2px 8px 0px rgba(0, 255, 255, 0.7);
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  cursor: pointer;
+}

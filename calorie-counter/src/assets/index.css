@@ -1,0 +1,280 @@
+.root {
+  margin: 0 auto;
+  max-width: 1280px;
+  min-width: 310px;
+  background-color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  gap: 30px;
+  align-items: baseline;
+}
+
+.header__buttons{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 20px;
+}
+
+.main__foodContainer,
+.main__buttonSortContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main__titleFood,
+.main__titleCalorie,
+.main__sortButton,
+.main__searchButton {
+  margin: 0;
+}
+
+.popup,
+.popupEdit,
+.popupProfile,
+.popupVisual {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(270, 100%, 2%, 0.3);
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.popupVisual__canvas{
+   margin: 0 auto;
+}
+
+.popup_is_visible,
+.popupEdit_is_visible,
+.popupProfile_is_visible,
+.popupVisual_is_visible {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.popup__label,
+.popupEdit__label,
+.popupProfile__label {
+  color: #000;
+}
+
+.popup__input,
+.popupEdit__input,
+.popupProfile__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.popup__container,
+.popupEdit__container,
+.popupProfile__container,
+.popupVisual__container {
+  position: relative;
+  width: 400px;
+  height: 408px;
+  border-radius: 16px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 16px 22px 22px 24px;
+}
+
+.popup__addButton,
+.popupEdit__addButton,
+.popupProfile__addButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.popup__addButton:hover,
+.popupEdit__addButton:hover,
+.popupProfile__addButton:hover {
+  background-color: #0056b3;
+}
+
+.popup__addItem,
+.popupEdit__addItem,
+.popupProfile__addItem,
+.popupVisual__addItem {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  justify-content: space-evenly;
+}
+
+.popup__title,
+.popupEdit__title,
+.popupProfile__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.popup__closeButton,
+.popupEdit__closeButton,
+.popupProfile__closeButton,
+.popupVisual__closeButton {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup__closeImg,
+.popupEdit__closeImg,
+.popupProfile__closeImg,
+.popupVisual__closeImg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.main__titleFood,
+.main__titleCount,
+.popup__addItem,
+.popupProfile__addItem {
+  color: #fff;
+}
+
+.main__buttonContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main__buttonSortContainer {
+  display: flex;
+  margin: 10px;
+}
+
+.main__foodContainer {
+  display: flex;
+  align-items: baseline;
+}
+
+.main__titleFood {
+  color: #fff;
+  margin: 0;
+  transition: opacity 0.3s ease;
+  opacity: 1;
+}
+
+.main__titleCalorie{
+  margin: 0;
+}
+
+.main__searchButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.main__searchInput {
+  display: none;
+  width: 60%;
+  margin-left: 10px;
+  border: none;
+  transition: width 0.3s ease;
+  padding-left: 0;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.main__editItem,
+.main__deleteItem,
+.header__addItemButton,
+.header__profileButton,
+.header__graphsButton {
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.main__editItem:hover,
+.main__deleteItem:hover,
+.header__addItemButton:hover,
+.header__profileButton:hover,
+.header__graphsButton:hover {
+  opacity: .5;
+}
+
+.main__editImg,
+.main__deleteImg,
+.header__addItemImg,
+.header__profileImg,
+.header__graphsImg,
+.main__sortImg,
+.main__searchImg {
+  width: 15px;
+  height: 15px;
+}
+
+.main__sortButton,
+.main__searchButton {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  width: 20px;
+  height: 20px;
+  padding: 0;
+}
+
+.main__sortButton:hover {
+  opacity: .5;
+}
+
+.header__profileImg,
+.header__graphsImg {
+  width: 29px;
+  height: 29px;
+}
+
+.header__graphsImg {
+  width: 20px;
+  height: 20px;
+}

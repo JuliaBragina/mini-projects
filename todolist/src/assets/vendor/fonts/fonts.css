@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'alethia_proitalic';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('alethiapro-italic-webfont.woff2') format('woff2'),
+       url('alethiapro-italic-webfont.woff') format('woff'),
+}
+
+@font-face {
+  font-family: 'alethia_proregular';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url('alethiapro-regular-webfont.woff2') format('woff2'),
+       url('alethiapro-regular-webfont.woff') format('woff'),
+}

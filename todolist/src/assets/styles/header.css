@@ -1,0 +1,59 @@
+.header {
+    height: 80px;
+    position: relative;
+    height: 426px;
+  }
+
+  .header__container{
+    margin-bottom: 170px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__section {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+  }
+  
+  .header__background {
+    margin: 0 auto;
+    object-fit: contain;
+    max-width: 100%;
+  }
+
+  .header__buttonAdd{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+  }
+
+  .header__buttonAdd:hover{
+    opacity: .5;
+  }
+
+  .header__buttonImg{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .header__title {
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+  }
+  
+  .header__time {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
